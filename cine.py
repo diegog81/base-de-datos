@@ -3,7 +3,7 @@ import cartelera
 import formatos
 import funciones
 import mostrarFunciones
-
+import comprarEntradas
 base = sqlite3.connect('D:\Sqlite\cine.db')
 c = base.cursor()
 
@@ -18,8 +18,9 @@ def opcionesDeBienvenida():
     print("1- Ver Carteleras")
     print("2- Ver Formatos")
     print("3- Crear función")
-    print("4- Entradas")
-    print("5- Salir")
+    print("4- Ver Funciones")
+    print("5- Comprar Entradas")
+    print("6- Salir")
 
 def cine():
     opcion = 1
@@ -40,8 +41,10 @@ def cine():
             base.commit()
         elif opcion == "4":
             mostrarFunciones.mostrarFunciones()
-
         elif opcion == "5":
+
+            comprarEntradas.comprarEntradas()
+        elif opcion == "6":
             break
         else:
             print("no ingreso ninguna opción")
