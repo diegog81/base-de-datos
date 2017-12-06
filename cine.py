@@ -4,6 +4,7 @@ import formatos
 import funciones
 import mostrarFunciones
 import comprarEntradas
+import os
 base = sqlite3.connect('D:\Sqlite\cine.db')
 c = base.cursor()
 
@@ -12,6 +13,7 @@ salas = "SELECT * FROM SALAS;"
 
 
 def opcionesDeBienvenida():
+    os.system('cls')
     print("Bienvenido a CINE DB")
     print()
     print("Elegir Opción: ")
@@ -31,12 +33,12 @@ def cine():
         opcion = input("Ingrese opción: ")
 
         if opcion == "1":
+            os.system('cls')
             cartelera.ver_carteleras()
         elif opcion == "2":
             formatos.ver_formatos()
         elif opcion == "3":
             opcionesDeCompras = funciones.fuinciones()
-            print(opcionesDeCompras)
             c.execute("INSERT INTO FUNCIONES (ID_PELICULAS, ID_SALAS, BUTACAS_LIBRES, FECHA_HORA) VALUES ({},{},{},{});".format(opcionesDeCompras[0],opcionesDeCompras[1],opcionesDeCompras[2],"20170303"))
             base.commit()
         elif opcion == "4":

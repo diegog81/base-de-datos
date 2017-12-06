@@ -1,4 +1,5 @@
 import sqlite3
+import os
 base = sqlite3.connect('D:\Sqlite\cine.db')
 c = base.cursor()
 
@@ -10,6 +11,7 @@ def ver_carteleras():
     """
     imprime la cartelera de peliculas
     """
+    os.system('clear')
     c.execute(peliculas)
     resp = c.fetchall()
     for i in resp:
