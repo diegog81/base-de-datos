@@ -1,4 +1,3 @@
-
 import sqlite3
 import cartelera
 import formatos

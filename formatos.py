@@ -1,6 +1,8 @@
 import sqlite3
+
 base = sqlite3.connect('D:\Sqlite\cine.db')
 c = base.cursor()
+
 salas = "SELECT * FROM SALAS;"
 
 def ver_formatos():

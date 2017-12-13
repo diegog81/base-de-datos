@@ -4,7 +4,7 @@ import formatos
 import funciones
 import mostrarFunciones
 import comprarEntradas
-import os
+
 base = sqlite3.connect('D:\Sqlite\cine.db')
 c = base.cursor()
 
@@ -13,7 +13,6 @@ salas = "SELECT * FROM SALAS;"
 
 
 def opcionesDeBienvenida():
-    os.system('cls')
     print("Bienvenido a CINE DB")
     print()
     print("Elegir Opción: ")
@@ -33,7 +32,6 @@ def cine():
         opcion = input("Ingrese opción: ")
 
         if opcion == "1":
-            os.system('cls')
             cartelera.ver_carteleras()
         elif opcion == "2":
             formatos.ver_formatos()

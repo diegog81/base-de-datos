@@ -1,4 +1,5 @@
 import sqlite3
+
 base = sqlite3.connect('D:\Sqlite\cine.db')
 c = base.cursor()
 

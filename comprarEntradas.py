@@ -1,5 +1,6 @@
 import sqlite3
 import mostrarFunciones
+
 base = sqlite3.connect('D:\Sqlite\cine.db')
 c = base.cursor()
 

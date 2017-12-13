@@ -1,7 +1,9 @@
 import sqlite3
+
 #cambio para probar git
 base = sqlite3.connect('D:\Sqlite\cine.db')
 c = base.cursor()
+
 salas = "SELECT * FROM SALAS;"
 
 
